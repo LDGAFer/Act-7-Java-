@@ -1,0 +1,27 @@
+package com.mycompany.actividad7;
+
+import java.util.Scanner;
+
+class Actividad7 {
+    
+    public static void main(String[] args) {
+        
+        System.out.println("¿De qué tamaño quieres hacer las series de números?");
+        Scanner scanner = new Scanner(System.in);
+        int lecturaUsuario = scanner.nextInt();
+        
+        Series serie1 = new Series(lecturaUsuario);
+        
+        int[] resultadosA = serie1.numerosPrimos();
+        int[] resultadosB = serie1.sucesFibo();
+        
+        System.out.println("Serie de números primos");
+        for (int i=0; i < resultadosA.length;i++){
+            System.out.println(resultadosA[i]);
+        }
+        System.out.println("Sucesión de Fibonacci");
+        for (int i=0; i < resultadosB.length;i++){
+            System.out.println(resultadosB[i]);
+        }
+    }
+}
